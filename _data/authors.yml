@@ -1,0 +1,23 @@
+ghost:
+  username: ghost
+  name: Ghost
+  url_full: http://jekyller.github.io/jasper2/
+  url: jekyller.github.io/jasper2
+  bio: The professional publishing platform
+  picture: assets/images/ghost.png
+  facebook: ghost
+  twitter: tryghost
+  cover: False
+mishal:
+  username: mishal
+  name: Mishal Shah
+  location: Mangalore
+  url_full: https://mishal23.github.io
+  url: mishal23.github.io
+  bio: Development SIG
+  picture: assets/images/mishal.jpeg
+  facebook: mishal.shah.7731
+  twitter: 1998Mishal
+  linkedin: mishal23
+  github: mishal23
+  cover: False

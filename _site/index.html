@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>WebClub Blog</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Computer Science Club of NITK, Surathkal!" />
+    <link rel="shortcut icon" href="http://localhost:4000/blog/assets/images/LOGO.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/blog/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="WebClub Blog" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WebClub Blog" />
+    <meta property="og:description" content="Computer Science Club of NITK, Surathkal!" />
+    <meta property="og:url" content="http://localhost:4000/blog/" />
+    <meta property="og:image" content="http://localhost:4000/blog/" />
+    <meta property="article:publisher" content="https://www.facebook.com/web.club.nitk" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WebClub Blog" />
+    <meta name="twitter:description" content="Computer Science Club of NITK, Surathkal!" />
+    <meta name="twitter:url" content="http://localhost:4000/blog/" />
+    <meta name="twitter:image" content="http://localhost:4000/blog/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="WebClub Blog" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "WebClub Blog",
+        "logo": "http://localhost:4000/blog/assets/images/textlogo.png"
+    },
+    "url": "http://localhost:4000/blog/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/blog/",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/blog/"
+    },
+    "description": "Computer Science Club of NITK, Surathkal!"
+}
+    </script>
+
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="WebClub Blog" href="/blog/feed.xml" />
+
+
+</head>
+<body class="home-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer no-cover">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                
+                    <img class="site-logo" src="/blog/assets/images/textlogo.png" alt="WebClub Blog"/>
+                
+            </h1>
+            <h2 class="site-description">Computer Science Club of NITK, Surathkal!</h2>
+        </div>
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/blog/">Home</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://webclub.nitk.ac.in">Website</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+                <a class="social-link social-link-fb" href="https://facebook.com/web.club.nitk" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+            
+                <a class="social-link social-link-fb" href="https://linkedin.com/company/web-enthusiasts-club-nitk" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+</a>
+            
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            
+
+
+    <article class="post-card home-template">
+        
+            <a class="post-card-image-link" href="/blog/welcome">
+                <div class="post-card-image" style="background-image: url(/blog/assets/images/cover.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/blog/welcome">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Webclub</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Welcome WebClub Blog</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>The Computer Science Club of NITK, Surathkal
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                        
+                        <img class="author-profile-image" src="/blog/assets/images/mishal.jpeg" alt="Mishal Shah" />
+                        
+                        <span class="post-card-author">
+                            <a href="/blog/author/mishal/">Mishal Shah</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+
+        </div>
+
+    </div>
+</main>
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/blog/">WebClub Blog</a> &copy; 2020</section>
+                <nav class="site-footer-nav">
+                    <!-- <a href="/blog/">Latest Posts</a> -->
+                    
+                    <a href="https://facebook.com/web.club.nitk" target="_blank" rel="noopener">Facebook</a>
+                    
+                    <a href="https://linkedin.com/company/web-enthusiasts-club-nitk" target="_blank" rel="noopener">LinkedIn</a>
+                    
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('1');
+    </script>
+    <script src="/blog/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>
