@@ -1,8 +1,8 @@
 ## WebClub Blog
 
-[![Build Status](https://travis-ci.org/HackVerse/blog.svg?branch=master)](https://travis-ci.org/HackVerse/blog)
-[![Ruby](https://img.shields.io/badge/ruby-2.5.1-blue.svg?style=flat)](https://travis-ci.org/HackVerse/blog)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.7.4-blue.svg?style=flat)](https://travis-ci.org/HackVerse/blog)
+[![Build Status](https://travis-ci.org/WebClub-NITK/blog.svg?branch=master)](https://travis-ci.org/WebClub-NITK/blog)
+[![Ruby](https://img.shields.io/badge/ruby-2.5.1-blue.svg?style=flat)](https://travis-ci.org/WebClub-NITK/blog)
+[![Jekyll](https://img.shields.io/badge/jekyll-3.7.4-blue.svg?style=flat)](https://travis-ci.org/WebClub-NITK/blog)
 
 Repository for the WebClub Blog
 
