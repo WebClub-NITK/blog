@@ -15,17 +15,17 @@ author: abhishekkumar2718
 ## Basic git
 \\
 Before we continue, You must already know:
-- Basic operations - Cloning, committing and tracking file changes.
+- Basic operations - Cloning, committing, and tracking file changes.
 - Using branches.
 - Interacting with remote.
 
-Ben Lynn's Git Magic is a great, brief resource at 60 pages which covers above topics and everyday git. [Download here](http://www-cs-students.stanford.edu/~blynn/gitmagic/book.html).
+Ben Lynn's Git Magic is a great, brief resource at 60 pages that covers the above topics and everyday git. [Download here](http://www-cs-students.stanford.edu/~blynn/gitmagic/book.html).
 
 It's also available as a git repository if you are feeling brave enough. Get started with `git clone git://repo.or.cz/gitmagic.git`.
 
 ### Craft your commits carefully
 \\
-Commits are more than just a series of diffs - They explain the context, the _what_ and the _why_ of changes.
+Commits are more than just a series of diffs - They explain the context, the _what_ and the _why_ of changes. A perfect commit message answers _what are the changes_, _why are they needed_ and _how are they implemented_. Reviewers and maintainers need to be convinced by the commit message that it's worth their efforts.
 
 Here's a commit from a patch I had recently reviewed: 
 ```
@@ -55,12 +55,13 @@ Functions where comments were added to clarify the expected behavior:
    `strbuf_getcwd`
 ```
 
-- Title is vague. How is the _new way_ better or different than existing implementations?
-- First paragraph talks about changes introduced in a previous commit, which is now duplicated across both commits.
-- Second paragraph mentions _guaranteed to behave_ - How exactly is that implemented?
-- A changelog is entirely redundant - Reviewer can see the changes in the diff.
+- It fails to answer any of the above questions.
+- The title is vague. How is the _new way_ better or different than existing implementations?
+- The first paragraph talks about changes introduced in a previous commit, which are duplicated across both commits.
+- The second paragraph mentions _guaranteed to behave_ - How exactly is that implemented?
+- A changelog is entirely redundant - The reviewer can see the changes in the diff.
 
-Here's a much better version for the same commit:
+Here's a better version for the same commit:
 ```
 strbuf: teach strbuf to initialize constant string
 
@@ -73,15 +74,15 @@ converting to non-const strbuf.
 Closes gitgitgagdet issue #461
 ```
 
-It's shorter, and has more information! It's easy to think how the changes are implemented. Reviewing code becomes easier and fun.
+It's shorter, and has more information! It's easier to understand the implementation. Reviewing code becomes more comfortable and fun.
 
 > Read up on [how to write good commit messages](https://chris.beams.io/posts/git-commit/).
 
 ### Decide on a git workflow
 \\
-_This section is fairly opinionated - Each workflow has advantages. Choose what suits you._
+_This section is somewhat opinionated - Each workflow has advantages. Choose what suits you._
 
-There are many workflows to use git - Feature branching, gitflow, forking workflow, centralized workflow. Learn about them and decide an appropriate workflow for the project you are working.
+There are many workflows to use git - Feature branching, gitflow, forking workflow, centralized workflow. Learn about them and decide on an appropriate workflow for your projects.
 
 I am a messy developer who likes clean git logs - See a contradiction? I tend to create a lot of non-sensical, poor commits while developing. It makes sense for me to use [squash rebase workflow](https://blog.carbonfive.com/2017/08/28/always-squash-and-rebase-your-git-commits/).
 
@@ -98,62 +99,64 @@ Anecdotally, I get more work done when I plan out commits into small chunks of ~
 
 ### Use `--patch` flag for smarter commits
 \\
-_You_: Listen, I know you are too enthusiatic about commits. I didn't, and now it's all grouped together - Is there something I could do?
+_You_: Listen, I know you are too enthusiastic about commits. I didn't, and now it's all grouped - Is there something I could do?
 
 _Me_: Ugh, use `git add -p`.
 
-_-p_ or the _patches_ flag allows you to go over each hunk of change and decide whether to add it to the current commit. You can then create mutliple commits with relevent changes in each step.
+_-p_ or the _patches_ flag allows you to go over each hunk of change and decide whether to add it to the current commit. You can then create multiple commits with relevant changes in each step.
 
-If you have ever tried modified a file in multiple places, and wanted to commit only a section of it - now you know how.
+If you have ever tried modified a file in multiple places and wanted to commit only a section of it - now you know-how.
 
 > Once you get used to patch wise commits, look up `--interactive` flag - it's a more efficient albeit less intuitive tool solving the same problem.
 
 ### Setup SSH keys
 \\
-_Remembering passwords is hard._ People have terrible memories. Computers, on the other hand are unnatural at memorising. Easy and repeated passwords are a security risk. Could everyone just not?
+_Remembering passwords are hard._ People have terrible memories. Computers, on the other hand, are unnatural at memorizing. Easy and repeated passwords are a security risk. Could everyone just not?
 
-SSH keys simplify the workflow in a easy, no effort way. Git remembers for you. Steps involved depend on your _forge_ (yes, service providers like Github are called forges):
+SSH keys simplify the workflow in an easy, no-effort way. Git remembers for you. Steps involved depend on your _forge_ (yes, service providers like Github are called forges):
 
 - [Setting up SSH keys for Github](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 - [Setting up SSH keys for Gitlab](https://docs.gitlab.com/ee/ssh/).
 
-> It's one of the first things I do when I set up a system. Also, setup reasonable defaults and aliases in `~/.gitconfig`.
+> It's one of the first things I do when I set up a system. Also, set up reasonable defaults and aliases in `~/.gitconfig`.
 
 ### Use .gitignore
 \\
-`.gitignore` instructs git to ignore particular files. Usually configuration and log files are ignored. But _all generatable files_ must be ignored - this includes generated binaries, object files, jars, flex/yacc generated code. Special operating system files like `.DS_Store`, `thumbs.db` should be added to global git ignore rules. The repositories look much cleaner without them.
+`.gitignore` instructs git to ignore particular files. Usually, configuration and log files are ignored. But _all generatable files_ must be ignored - this includes generated binaries, object files, jars, flex/yacc generated code. Special operating system files like `.DS_Store`, `thumbs.db` should be added to global git ignore rules. The repositories look much cleaner without them.
 
-> [gitignore.io](https://www.gitignore.io/) has extensive gitignore templates for programming languages, IDEs and projects.
+I have a habit of creating a `todo` file in each of my projects to jot down stuff. It's ignored globally.
 
-### Use hooks to automate boring stuff
+> [gitignore.io](https://www.gitignore.io/) has extensive gitignore templates for programming languages, IDEs, and projects.
+
+### Use hooks to automate the boring stuff
 \\
-Waiting for half hour, only for CI-CD tests to fail and complain about whitespace changes is surely an infuriating experience.
+Waiting for a half-hour, only for CI-CD tests to fail and complain about whitespace changes, is surely an infuriating experience.
 
 _Hooks_ to the rescue!
 
-_Hooks_ are custom scripts which are triggered by operations like commiting, pushing. Using hooks, you can run the linter locally before each push. No more broken lint tests!.
+_Hooks_ are custom scripts that are triggered by operations like committing, pushing. Using hooks, you can run the linter locally before each push. No more broken lint tests!.
 
 But that is not all - You can improve your productivity by automating repetitive tasks. Clearing out build files when changing branches, deploying websites by pushing to master, creating merge requests when creating a new remote branch are good examples. 
 
-> [githooks](https://githooks.com/) contains a lot more documentation, examples and projects for managing git hooks.
+> [githooks](https://githooks.com/) contains a lot more documentation, examples, and projects for managing git hooks.
 
 ### Use submodules
 \\
-Submodules are way to nest repositories. How is that useful, you might ask? Here's an example from the documentation:
+Submodules are a way to nest repositories. How is that useful? You might ask. Here's an example from the documentation:
 
-> Suppose you are developing a website and creating Atom feeds. You decide to use a third party library. It's difficult to customize the library and deploy it. Submodules addresses this by keeping the library repository as subdirectory of your project.
+> Suppose you are developing a website and creating Atom feeds. You decide to use a third-party library. It's difficult to customize the library and deploy it. Submodules address this by keeping the library repository as a subdirectory of your project.
 
-Submodules allow you to keep a repository as a subdirectory of another repository. You could clone the library and make your changes, confident that it can be deployed later. Newer package managers like RubyGems, Go Modules can build directly from forges. Submodules are redundant in such tech stacks.
+Submodules allow you to keep a repository as a subdirectory of another repository. You could clone the library and make your changes, confident that it can be deployed later. Newer package managers like RubyGems, Go Modules can build directly from forges. Submodules are redundant in such environments.
 
-Another use case is splitting very large projects into submodules. [Boost](https://github.com/boostorg/boost), a collection of high quality C++ libraries manages individual libraries as an submodule. This reduces the cost of initial clone, ensures relevant updates and has a seperate community around each interest.
+Another use case is splitting massive projects into submodules. [Boost](https://github.com/boostorg/boost), a collection of high-quality C++ libraries, manages individual libraries as a submodule. Submodules reduce the cost of the initial clone, ensure relevant updates, and have a separate community around each interest.
 
 > Subtrees also attempt to solve the problems as submodules in a more accessible way. [Read about their differences](https://www.atlassian.com/git/tutorials/git-subtree).
 
-### Use worktrees instead of mutliple clones
+### Use worktrees instead of multiple clones
 \\
 While working on websites - I need to compare the behavior of my changes with master. Constantly switching branches for each new tab adds a mental overhead.
 
-_Worktrees_ allow you to create an extra copy of your repository. The changes are synced between worktrees. They are better and more efficient than managing mutliple clones. If you want to checkout two branches at once - worktrees solve this itch.
+_Worktrees_ allows you to create an extra copy of your repository. The changes are synced between worktrees. They are better and more efficient than managing multiple clones. If you want to checkout two branches at once - worktrees solve this itch.
 
 Some other use cases for worktree are fixing merge conflicts (you can navigate source code by checking out master) and running large test suites locally.
 
@@ -161,14 +164,15 @@ Some other use cases for worktree are fixing merge conflicts (you can navigate s
 
 ### Conclusion
 \\
-Before I knew about _git grep_, I used to open up firefox, go to the repository and use github's search feature. It was - you might expect, terribly inefficient. Learning these features taught me to become a more thoughtful, a more productive developer.
+Before I knew about _git grep_, I used to open up firefox, go to the repository, and use Github's search feature. It was - you might expect, terribly inefficient. Learning these features taught me to become a more thoughtful, more productive developer.
 
 Learning more about the tools we use - programming languages, IDEs, VCS is essential to improve as a developer.
 
 ### Further Reading
 \\
-Some more handy topics that didn't really fit in:
-1. [git grep](https://git-scm.com/docs/git-grep) - Fast text search for tracked files.
+Some more handy topics that didn't fit in:
+1. [Git grep](https://git-scm.com/docs/git-grep) - Fast text search for tracked files.
 2. [Git mailing list](https://public-inbox.org/git/) - Where all the _cool kids_ hangout.
-3. [Git best practices](https://sethrobertson.github.io/GitBestPractices/).
-4. [10 Git anti patterns](https://speakerdeck.com/lemiorhan/10-git-anti-patterns-you-should-be-aware-of).
+3. [Pro git](https://git-scm.com/book/en/v2) - The definitive book on more advanced use of git.
+4. [Git best practices](https://sethrobertson.github.io/GitBestPractices/).
+5. [10 Git anti patterns](https://speakerdeck.com/lemiorhan/10-git-anti-patterns-you-should-be-aware-of).
