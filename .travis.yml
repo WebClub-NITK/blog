@@ -6,6 +6,7 @@ rvm:
 
 install:
   # Install Jekyll and dependencies
+  - gem install bundler
   - bundle install
 
 script: bundle exec rake site:deploy --quiet #--trace
