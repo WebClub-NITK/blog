@@ -2,11 +2,12 @@ sudo: false
 language: ruby
 cache: bundler
 rvm:
-- 2.5.1
+- 2.6.3
 
 install:
   # Install Jekyll and dependencies
-  - gem install bundler -v 2.0.1
+  - gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
+  - gem update --system
   - bundle install
 
 script: bundle exec rake site:deploy --quiet #--trace
