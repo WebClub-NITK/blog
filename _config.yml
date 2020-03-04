@@ -76,7 +76,7 @@ username: webclub-nitk
 repo: blog
 branch: master
 relative_source: #../jasper2/
-destination: _site/
+destination: ../site/
 production_url:  https://webclub.nitk.ac.in/blog/
 source_url:  https://github.com/webclub-nitk/blog/
 
