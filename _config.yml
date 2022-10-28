@@ -8,14 +8,18 @@ words_per_minute: 200
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /blog/
 
+
 # Website info
 title: WebClub Blog
+main_title: Blogs - WebClub NITK
 description: Computer Science Club of NITK, Surathkal!
 cover: #assets/images/cover.jpg
 logo: assets/images/textlogo.png
+logo_blue: assets/images/textlogo_blue.png
 logo_dark: assets/images/textlogo.png
 favicon: assets/images/LOGO.png
 production_url: https://webclub.nitk.ac.in/blog/
+mainurl: https://webclub.nitk.ac.in/#/
 source_url: https://github.com/webclub-nitk/blog/
 CNAME: #add cname for website to be created
 
