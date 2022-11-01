@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Computer Science Club of NITK, Surathkal!</description>
+    <link>
+    </link>
+    
+      
+      <item>
+        <title>Intermediate Git</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;The version control system&lt;/strong&gt;. It’s hard to imagine working on large projects or collaborating without git. If you want to learn beyond basic git and simplify your workflow, read on!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 16 Feb 2020 12:00:00 +0000</pubDate>
+        <link>
+        /intermediate-git</link>
+        <guid isPermaLink="true">/intermediate-git</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Welcome WebClub Blog</title>
+        
+          <description>&lt;p&gt;The Computer Science Club of NITK, Surathkal&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 05 Feb 2020 10:00:00 +0000</pubDate>
+        <link>
+        /welcome</link>
+        <guid isPermaLink="true">/welcome</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
