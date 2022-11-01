@@ -1,6 +1,6 @@
 ## WebClub Blog
 
-[![Build Status](https://travis-ci.org/WebClub-NITK/blog.svg?branch=master)](https://travis-ci.org/WebClub-NITK/blog)
+![Build Status](https://github.com/WebClub-NITK/blog/actions/workflows/build_site.yml/badge.svg)
 [![Ruby](https://img.shields.io/badge/ruby-2.5.1-blue.svg?style=flat)](https://travis-ci.org/WebClub-NITK/blog)
 [![Jekyll](https://img.shields.io/badge/jekyll-3.7.4-blue.svg?style=flat)](https://travis-ci.org/WebClub-NITK/blog)
 
